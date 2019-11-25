@@ -8,3 +8,5 @@
 !.gitignore
 !high_entropy_frog.png
 !low_entropy_frog.png
+!high_entropy_bird.png
+!low_entropy_bird.png

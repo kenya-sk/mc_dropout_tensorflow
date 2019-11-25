@@ -6,13 +6,15 @@ paper: Dropout as a Bayesian Approximation: Representing Model Uncertainty in De
 
 ## Results
 The higher entropy, the more difficult it is to predict.  
-The top 10 for the case of "frog" is shown.
+The top 10 for the case of "bird" and "frog" is shown.
 
 
 ・High entropy top 10　
-
+<img src="./data/demo/high_entropy_bird.png" margin="50" width="500" title="high_bird"> 
+ 
 <img src="./data/demo/high_entropy_frog.png" margin="50" width="500" title="high_frog"> 
 
 ・Low entropy top 10  
+<img src="./data/demo/low_entropy_bird.png" margin="50" width="500" title="low_bird"> 
 
 <img src="./data/demo/low_entropy_frog.png" margin="50" width="500" title="low_frog"> 
