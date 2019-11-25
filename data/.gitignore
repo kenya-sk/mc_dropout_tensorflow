@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Whitelist anything that's a directory
+!*/
+
+# And all the file types I'm interested in.
+!.gitignore
