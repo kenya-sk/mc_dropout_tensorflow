@@ -6,7 +6,7 @@
 
 # And all the file types I'm interested in.
 !.gitignore
-!high_entropy_frog.png
-!low_entropy_frog.png
+!high_entropy_airplane.png
+!low_entropy_airplane.png
 !high_entropy_bird.png
 !low_entropy_bird.png
