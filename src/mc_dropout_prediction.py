@@ -4,17 +4,18 @@ from collections import defaultdict
 from tqdm import trange
 
 
-def mc_dropout_prediction(model, x_test, y_test, sample_num=50, class_num=10):
-    entropy_dctlst = defaultdict(list)
-    for i in trange(len(x_test)):
-        image = x_test[i]
-        image = image[np.newaxis]
-        preds = np.zeros((sample_num, class_num), dtype=np.float32)
-        for j in range(sample_num):
-            predictions = model(image)
-            preds[j, :] = predictions
-        preds = preds.mean(axis=0)
-        entropy = np.sum(-preds * np.log(preds))
-        entropy_dctlst[y_test[i][0]].append(entropy)
+def mc_dropout_prediction(x_test, y_test, model, sample_num=100, class_num=10):
+  pred_dctlst = {"answer": [], "entropy": []}
+  for i in trange(len(x_test)):
+    image = x_test[i]
+    image = image[np.newaxis]
+    preds = np.zeros((sample_num, class_num), dtype=np.float32)
+    for j in range(sample_num):
+      predictions = model(image)
+      preds[j, :] = predictions
+    preds = preds.mean(axis=0)
+    entropy = np.sum(-preds*np.log(preds))
+    pred_dctlst["answer"].append(y_test[i][0])
+    pred_dctlst["entropy"].append(entropy)
 
-    return entropy_dctlst
+  return pred_dctlst

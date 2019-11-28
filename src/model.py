@@ -5,20 +5,20 @@ class MCDropoutModel(Model):
     def __init__(self):
         super(MCDropoutModel, self).__init__()
         self.conv1 = Conv2D(64, (3, 3), activation="relu")
-        self.dropout1 = Dropout(0.25)
+        self.dropout1 = Dropout(0.5)
         self.pool1 = MaxPool2D()
         # second layer
         self.conv2 = Conv2D(128, (3, 3), activation="relu")
-        self.dropout2 = Dropout(0.25)
+        self.dropout2 = Dropout(0.5)
         self.pool2 = MaxPool2D()
         # third layer
         self.conv3 = Conv2D(256, (3, 3), activation="relu")
-        self.dropout3 = Dropout(0.25)
+        self.dropout3 = Dropout(0.5)
         self.pool3 = GlobalAveragePooling2D()
         self.flatten = Flatten()
         # fourth layer
         self.dense1 = Dense(1024, activation="relu")
-        self.dropout4 = Dropout(0.25)
+        self.dropout4 = Dropout(0.5)
         # output
         self.dense2 = Dense(10, activation="softmax")
 
