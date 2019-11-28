@@ -1,4 +1,4 @@
-from tensorflow.keras.layers import Dense, Flatten, Conv2D, Dropout, MaxPool2D, GlobalAveragePooling2Ds
+from tensorflow.keras.layers import Dense, Flatten, Conv2D, Dropout, MaxPool2D, GlobalAveragePooling2D
 from tensorflow.keras import Model
 
 class MCDropoutModel(Model):
