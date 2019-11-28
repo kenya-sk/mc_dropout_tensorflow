@@ -31,6 +31,6 @@ The top 10 for the case of "airplane" and "bird" is shown.
 
 ・Low entropy top 10  
 
-<img src="./data/demo/low_entropy_airplane.png" margin="50" width="500" title="low_airplanes"> 
+<img src="./data/demo/low_entropy_airplane.png" margin="50" width="500" title="low_airplane"> 
 
 <img src="./data/demo/low_entropy_bird.png" margin="50" width="500" title="low_bird"> 
